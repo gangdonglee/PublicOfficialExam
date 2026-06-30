@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#3b82f6" />
+  <meta name="description" content="9급 공무원 컴퓨터직 기출문제 학습 앱 - 컴퓨터일반·정보보호론·국어" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>9급 기출 마스터</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <main id="view" class="view"></main>
+    <nav id="tabbar" class="tabbar" hidden>
+      <button class="tab" data-route="#/home">
+        <span class="tab-ico">🏠</span><span class="tab-label">홈</span>
+      </button>
+      <button class="tab" data-route="#/wrong">
+        <span class="tab-ico">📝</span><span class="tab-label">오답노트</span>
+      </button>
+      <button class="tab" data-route="#/bookmarks">
+        <span class="tab-ico">⭐</span><span class="tab-label">즐겨찾기</span>
+      </button>
+      <button class="tab" data-route="#/stats">
+        <span class="tab-ico">📊</span><span class="tab-label">통계</span>
+      </button>
+      <button class="tab" data-route="#/settings">
+        <span class="tab-ico">⚙️</span><span class="tab-label">설정</span>
+      </button>
+    </nav>
+  </div>
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <div id="sheet" class="sheet-backdrop" hidden></div>
+
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

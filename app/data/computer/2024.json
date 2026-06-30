@@ -1,0 +1,255 @@
+{
+  "subject": "computer",
+  "subjectName": "컴퓨터일반",
+  "year": 2024,
+  "title": "2024 국가직 9급 컴퓨터일반",
+  "source": "2024년도 국가공무원 9급 공채 필기시험",
+  "booklet": "가",
+  "count": 20,
+  "questions": [
+    {
+      "no": 1,
+      "stem": "컴퓨터에서 사용하는 정보량의 단위를 크기가 작은 것부터 큰 것 순서대로 바르게 나열한 것은?",
+      "choices": [
+        "EB, GB, PB, TB",
+        "EB, PB, GB, TB",
+        "GB, TB, EB, PB",
+        "GB, TB, PB, EB"
+      ],
+      "answer": 4,
+      "explanation": "정보량 단위는 작은 것부터 <b>KB &lt; MB &lt; GB &lt; TB &lt; PB &lt; EB &lt; ZB &lt; YB</b> 순이다.<br>따라서 GB &lt; TB &lt; PB &lt; EB 순인 ④가 옳다."
+    },
+    {
+      "no": 2,
+      "stem": "다음 논리회로도에서 출력 F가 0이 되는 입력 조합을 바르게 연결한 것은?",
+      "assets": [
+        {"type": "image", "src": "data/img/computer-2024-q2.png", "alt": "논리회로도: 입력 X는 OR 게이트로, 입력 Y와 Z는 XOR 게이트로 들어가고, XOR의 출력과 X가 OR 게이트로 연결되어 출력 F를 만든다."},
+        {"type": "note", "html": "각 보기는 <b>X / Y / Z</b> 값을 의미한다."}
+      ],
+      "choices": [
+        "0 / 0 / 1",
+        "0 / 1 / 0",
+        "0 / 1 / 1",
+        "1 / 0 / 0"
+      ],
+      "answer": 3,
+      "explanation": "회로식은 <b>F = X OR (Y XOR Z)</b> 이다. F가 0이 되려면 X = 0 이고 (Y XOR Z) = 0 (즉 Y = Z) 이어야 한다.<br>③ X=0, Y=1, Z=1 → 0 OR (1 XOR 1) = 0 OR 0 = <b>0</b> (정답)<br>① 0 OR (0 XOR 1)=1, ② 0 OR (1 XOR 0)=1, ④ 1 OR (0 XOR 0)=1 로 모두 1이다."
+    },
+    {
+      "no": 3,
+      "stem": "암호화 및 복호화를 위하여 개인키와 공개키가 필요한 비대칭키 암호화 기법은?",
+      "choices": ["AES", "DES", "RSA", "SEED"],
+      "answer": 3,
+      "explanation": "공개키와 개인키 한 쌍을 사용하는 <b>비대칭키 암호화</b>의 대표 알고리즘은 <b>RSA</b>이다.<br>AES, DES, SEED는 모두 하나의 비밀키를 공유하는 <b>대칭키 암호화</b> 기법이다."
+    },
+    {
+      "no": 4,
+      "stem": "OSI 모형의 네트워크 계층 프로토콜에 속하지 않는 것은?",
+      "choices": ["ICMP", "IGMP", "IP", "SLIP"],
+      "answer": 4,
+      "explanation": "<b>SLIP</b>(Serial Line Internet Protocol)은 직렬 회선에서 IP 패킷을 전송하는 <b>데이터 링크 계층</b> 프로토콜이다.<br>IP, ICMP, IGMP는 모두 <b>네트워크 계층</b> 프로토콜이다."
+    },
+    {
+      "no": 5,
+      "stem": "클라우드 컴퓨팅 서비스에서 애플리케이션을 구축, 테스트, 설치할 수 있도록 통합환경을 제공하는 것은?",
+      "choices": ["IaaS", "NAS", "PaaS", "SaaS"],
+      "answer": 3,
+      "explanation": "애플리케이션의 개발(구축)·테스트·배포를 위한 <b>플랫폼(통합 개발 환경)</b>을 제공하는 서비스는 <b>PaaS</b>(Platform as a Service)이다.<br>① IaaS: 서버·스토리지 등 인프라 제공, ④ SaaS: 완성된 소프트웨어 제공, ② NAS: 네트워크 결합 저장장치(클라우드 서비스 모델 아님)."
+    },
+    {
+      "no": 6,
+      "stem": "10진수 뺄셈 (7 － 12)를 2의 보수를 이용하여 계산한 결과는? (단, 저장 공간은 8비트로 한다)",
+      "choices": [
+        "0000 0100",
+        "0000 0101",
+        "1111 0101",
+        "1111 1011"
+      ],
+      "answer": 4,
+      "explanation": "7 − 12 = 7 + (−12). 7 = 0000 0111, 12 = 0000 1100 이므로 −12의 2의 보수는 1111 0100 이다.<br>0000 0111 + 1111 0100 = <b>1111 1011</b> (= 10진수 −5의 2의 보수 표현)."
+    },
+    {
+      "no": 7,
+      "stem": "RAID(Redundant Array of Inexpensive Disks) 레벨에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "RAID 레벨 0: 패리티 없이 데이터를 분산 저장한다.",
+        "RAID 레벨 1: 패리티 비트를 사용하여 오류를 검출한다.",
+        "RAID 레벨 2: 해밍 코드를 사용하여 오류 검출 및 정정이 가능하다.",
+        "RAID 레벨 5: 데이터와 함께 패리티 정보를 블록 단위로 분산 저장한다."
+      ],
+      "answer": 2,
+      "explanation": "②가 틀렸다. <b>RAID 1은 미러링(mirroring)</b>으로 동일한 데이터를 그대로 복제 저장하는 방식이며, 패리티 비트를 사용하지 않는다.<br>① RAID 0은 스트라이핑(패리티 없음), ③ RAID 2는 해밍 코드 사용, ④ RAID 5는 패리티를 블록 단위로 분산 저장 — 모두 옳다."
+    },
+    {
+      "no": 8,
+      "stem": "RISC와 비교하여 CISC의 특징으로 옳지 않은 것은?",
+      "choices": [
+        "명령어의 종류가 많다.",
+        "명령어의 길이가 고정적이다.",
+        "명령어 파이프라인이 비효율적이다.",
+        "회로 구성이 복잡하다."
+      ],
+      "answer": 2,
+      "explanation": "②가 틀렸다. <b>CISC는 명령어 길이가 가변적</b>이다. 명령어 길이가 고정적인 것은 RISC의 특징이다.<br>CISC는 명령어 종류가 많고(①), 명령어 길이·실행 시간이 일정하지 않아 파이프라인이 비효율적이며(③), 회로 구성이 복잡(④)하다."
+    },
+    {
+      "no": 9,
+      "stem": "다음 파이썬 코드는 이진 탐색을 이용하여 자연수 데이터를 탐색하는 함수이다. (가), (나)에 들어갈 내용을 바르게 연결한 것은? (단, ds는 오름차순으로 정렬된 중복 없는 자연수 리스트이고, key는 찾고자 하는 값이다)",
+      "assets": [
+        {"type": "code", "lang": "python", "text": "def binary(ds, key):\n    low = 0\n    high = len(ds) - 1\n    while low <= high:\n        mid = (low+high) // 2\n        if key == ds[mid]:\n            return mid\n        elif key < ds[mid]:\n            (가)\n        else:\n            (나)\n    return"},
+        {"type": "note", "html": "순서: <b>(가) / (나)</b>"}
+      ],
+      "choices": [
+        "high = mid - 1 / low = mid - 1",
+        "high = mid - 1 / low = mid + 1",
+        "high = mid + 1 / low = mid - 1",
+        "high = mid + 1 / low = mid + 1"
+      ],
+      "answer": 2,
+      "explanation": "이진 탐색에서 key가 중간값보다 <b>작으면</b> 왼쪽 절반을 탐색하므로 (가) <b>high = mid - 1</b>, key가 중간값보다 <b>크면</b> 오른쪽 절반을 탐색하므로 (나) <b>low = mid + 1</b> 이다.<br>따라서 ②가 옳다."
+    },
+    {
+      "no": 10,
+      "stem": "3개의 페이지 프레임으로 구성된 기억장치에서 다음과 같은 참조열 순으로 페이지가 참조될 때, 페이지 부재 발생 횟수가 가장 적은 교체 방법은? (단, 초기 페이지 프레임은 비어 있으며, 페이지 교체 과정에서 사용 빈도수가 동일한 경우는 가장 오래된 것을 먼저 교체한다)",
+      "assets": [
+        {"type": "box", "html": "참조열: 2 1 2 3 1 4 5 1 4 3"}
+      ],
+      "choices": [
+        "FIFO(First In First Out)",
+        "LFU(Least Frequently Used)",
+        "LRU(Least Recently Used)",
+        "MFU(Most Frequently Used)"
+      ],
+      "answer": 3,
+      "explanation": "각 알고리즘으로 참조열 2 1 2 3 1 4 5 1 4 3을 추적하면 페이지 부재 횟수는 FIFO 8회, LFU 7회, MFU 7회, <b>LRU 6회</b>이다.<br>따라서 부재가 가장 적은 것은 <b>LRU</b>(③)이다."
+    },
+    {
+      "no": 11,
+      "stem": "교착상태(deadlock)가 발생하기 위한 필요조건에 해당하지 않는 것은?",
+      "choices": [
+        "상호 배제(mutual exclusion)",
+        "선점(preemption)",
+        "순환 대기(circular wait)",
+        "점유와 대기(hold and wait)"
+      ],
+      "answer": 2,
+      "explanation": "교착상태의 4가지 필요조건은 <b>상호 배제, 점유와 대기, 비선점(non-preemption), 순환 대기</b>이다.<br>②는 '선점(preemption)'으로, 필요조건은 선점이 아니라 <b>비선점</b>이므로 해당하지 않는다."
+    },
+    {
+      "no": 12,
+      "stem": "다음 CPU 스케줄링 알고리즘 중 비선점형 알고리즘만을 모두 고르면?",
+      "assets": [
+        {"type": "box", "html": "ㄱ. FCFS(First Come First Served) 스케줄링<br>ㄴ. HRN(Highest Response-ratio Next) 스케줄링<br>ㄷ. RR(Round Robin) 스케줄링<br>ㄹ. SRT(Shortest Remaining Time) 스케줄링"}
+      ],
+      "choices": ["ㄱ, ㄴ", "ㄱ, ㄹ", "ㄴ, ㄷ", "ㄷ, ㄹ"],
+      "answer": 1,
+      "explanation": "비선점형은 <b>ㄱ(FCFS), ㄴ(HRN)</b>이다.<br>ㄷ RR은 시간 할당량(time quantum)으로 강제 교체하는 <b>선점형</b>, ㄹ SRT는 SJF의 선점형 버전으로 <b>선점형</b>이다."
+    },
+    {
+      "no": 13,
+      "stem": "네트워크 접속 형태 중 트리형 토폴로지(topology)에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "네트워크의 확장이 용이하다.",
+        "병목 현상이 나타나지 않는다.",
+        "분산처리 방식을 구현할 수 있다.",
+        "중앙의 서버 컴퓨터에 장애가 발생하면 전체 네트워크에 영향을 준다."
+      ],
+      "answer": 2,
+      "explanation": "②가 틀렸다. 트리형은 상위 노드(루트)에 트래픽이 집중되므로 <b>병목 현상이 발생할 수 있다</b>.<br>① 하위에 노드를 추가하기 쉬워 확장이 용이하고, ③ 분산처리 구현이 가능하며, ④ 상위 노드 장애 시 그 하위 전체에 영향을 준다 — 모두 옳다."
+    },
+    {
+      "no": 14,
+      "stem": "IPv4 주소를 클래스별로 분류했을 때, B 클래스에 해당하는 것은?",
+      "choices": [
+        "12.23.34.45",
+        "111.111.11.11",
+        "128.128.128.128",
+        "222.111.222.111"
+      ],
+      "answer": 3,
+      "explanation": "클래스는 첫 옥텟 값으로 구분한다. A: 0~127, <b>B: 128~191</b>, C: 192~223, D: 224~239.<br>③ 첫 옥텟이 128이므로 <b>B 클래스</b>이다.<br>① 12 → A, ② 111 → A, ④ 222 → C 클래스."
+    },
+    {
+      "no": 15,
+      "stem": "다음 설명에 해당하는 모듈의 결합도는?",
+      "assets": [
+        {"type": "box", "html": "한 모듈이 다른 모듈의 내부 기능 및 자료를 직접 참조하거나 사용하는 경우로, 한 모듈에서 다른 모듈의 내부로 제어가 이동하는 경우도 이에 해당한다."}
+      ],
+      "choices": [
+        "공통 결합도(common coupling)",
+        "내용 결합도(content coupling)",
+        "외부 결합도(external coupling)",
+        "자료 결합도(data coupling)"
+      ],
+      "answer": 2,
+      "explanation": "다른 모듈의 <b>내부 자료나 기능을 직접 참조</b>하거나 내부로 직접 제어가 이동하는 가장 강한(나쁜) 결합은 <b>내용 결합도(content coupling)</b>이다.<br>① 공통: 전역 변수 공유, ③ 외부: 외부 선언 데이터 공유, ④ 자료: 매개변수로 자료만 전달(가장 좋은 결합)."
+    },
+    {
+      "no": 16,
+      "stem": "다음 <정보>를 이용하여 아래에 주어진 <연산>을 차례대로 수행한 후의 스택 상태는?",
+      "assets": [
+        {"type": "box", "html": "&lt;정 보&gt;<br>○ Create(s, n): 스택을 위한 크기 n의 비어 있는 배열 s를 생성하고, top의 값을 －1로 지정한다.<br>○ Push(s, e): top을 1 증가시킨 후, s[top]에 요소 e를 할당한다.<br>○ Pop(s): s[top]의 요소를 삭제한 후, top을 1 감소시킨다."},
+        {"type": "code", "lang": "c", "text": "<연 산>\nCreate(s, 4);\nPush(s, 'S');\nPush(s, 'T');\nPop(s);\nPush(s, 'R');\nPush(s, 'P');\nPush(s, 'Q');\nPop(s);"},
+        {"type": "note", "html": "각 보기는 인덱스 3~0의 배열 내용과 top 위치를 나타낸다."}
+      ],
+      "choices": [
+        "top → 인덱스2: P, 인덱스1: R, 인덱스0: S (top은 인덱스 2)",
+        "top → 인덱스2: S, 인덱스1: R, 인덱스0: P (top은 인덱스 2)",
+        "top → 인덱스3(빈칸), 인덱스2: P, 인덱스1: R, 인덱스0: S (top은 인덱스 3)",
+        "top → 인덱스3(빈칸), 인덱스2: S, 인덱스1: R, 인덱스0: P (top은 인덱스 3)"
+      ],
+      "answer": 1,
+      "explanation": "연산을 추적하면: Push S(top0=S) → Push T(top1=T) → Pop(T 삭제, top0) → Push R(top1=R) → Push P(top2=P) → Push Q(top3=Q) → Pop(Q 삭제, top2).<br>최종 배열은 인덱스0=S, 1=R, 2=P 이고 <b>top은 인덱스 2(=P)</b>를 가리킨다. 따라서 ①이 옳다."
+    },
+    {
+      "no": 17,
+      "stem": "다음은 전체 버킷 개수가 11개이고 버킷당 1개의 슬롯을 가지는 빈 해시 테이블이다. 입력키 12, 33, 13, 55, 23, 83, 11을 순서대로 저장하였을 때, 입력키 23이 저장된 버킷 번호는? (단, 해시 함수는 h(k) ＝ k mod 11이고, 충돌 해결은 선형 조사법을 사용한다)",
+      "choices": ["1", "2", "3", "4"],
+      "answer": 4,
+      "explanation": "선형 조사법으로 저장 과정을 추적한다.<br>12 mod 11=1 → 버킷1<br>33 mod 11=0 → 버킷0<br>13 mod 11=2 → 버킷2<br>55 mod 11=0 → 0 충돌, 1 충돌, 2 충돌 → 버킷3<br>23 mod 11=1 → 1 충돌, 2 충돌, 3 충돌 → <b>버킷4</b>.<br>따라서 23은 <b>4번 버킷</b>에 저장된다."
+    },
+    {
+      "no": 18,
+      "stem": "다음 파이썬 코드는 std 변수에 저장된 각각의 Student 객체에 대해 학생 id 및 국어, 영어 성적의 평균을 출력한다. (가) ～ (다)에 들어갈 내용을 바르게 연결한 것은?",
+      "assets": [
+        {"type": "code", "lang": "python", "text": "class Student:\n    def __init__(self, id, kor, eng):\n        self.id = id\n        self.kor = kor\n        self.eng = eng\n\n    def sum(self):\n        return self.kor + self.eng\n\n    def avg(self):\n        return (가)\n\nstd = [\n    Student(\"ok\", 90, 100),\n    Student(\"pk\", 80, 90),\n    Student(\"rk\", 80, 80)\n]\n\nfor to in (나) :\n    print( (다) )"},
+        {"type": "note", "html": "순서: <b>(가) / (나) / (다)</b>"}
+      ],
+      "choices": [
+        "self.sum() / 2 / std / to.id, to.avg()",
+        "self.sum() / 2 / Student / Student.id, Student.avg()",
+        "sum(self) / 2 / std / to.id, to.avg(self)",
+        "sum(self) / 2 / Student / Student.id, Student.avg(self)"
+      ],
+      "answer": 1,
+      "explanation": "(가) 평균은 합을 2로 나누므로 인스턴스 메서드 호출 <b>self.sum() / 2</b> 이다.<br>(나) 객체 리스트를 순회해야 하므로 <b>std</b> 이다.<br>(다) 반복 변수 to를 통해 <b>to.id, to.avg()</b> 로 접근한다.<br>따라서 ①이 옳다."
+    },
+    {
+      "no": 19,
+      "stem": "DBMS에서의 병행 수행 및 병행 제어에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "2단계 로킹 규약을 적용하면 트랜잭션 스케줄의 직렬 가능성을 보장할 수 있으나 교착상태가 발생할 수도 있다.",
+        "트랜잭션이 데이터에 공용 lock 연산을 수행하면 해당 데이터에 read, write 연산을 모두 수행할 수 있다.",
+        "연쇄 복귀는 하나의 트랜잭션이 여러 개의 데이터 변경 연산을 수행할 때 일관성 없는 상태의 데이터베이스에서 데이터를 가져와 연산을 수행함으로써 모순된 결과가 발생하는 것이다.",
+        "갱신 분실은 트랜잭션이 완료되기 전에 장애가 발생하여 rollback 연산을 수행하면, 이 트랜잭션이 장애 발생 전에 변경한 데이터를 가져가 변경 연산을 수행한 또 다른 트랜잭션에도 rollback 연산을 수행하여야 한다는 것이다."
+      ],
+      "answer": 1,
+      "explanation": "①이 옳다. <b>2단계 로킹(2PL)</b>은 직렬 가능성을 보장하지만 교착상태를 완전히 방지하지는 못한다.<br>② ✕ 공용(공유, shared) lock은 <b>read만</b> 가능하다(write는 배타 lock 필요).<br>③ ✕ 설명은 '모순성(inconsistency)'에 대한 것이다. 연쇄 복귀는 한 트랜잭션의 rollback으로 그 데이터를 읽은 다른 트랜잭션도 함께 rollback되는 현상이다.<br>④ ✕ 설명은 '연쇄 복귀(cascading rollback)'에 대한 것이다. 갱신 분실은 두 트랜잭션이 같은 데이터를 갱신할 때 한쪽 갱신이 사라지는 현상이다."
+    },
+    {
+      "no": 20,
+      "stem": "다음 C 프로그램의 출력 결과는?",
+      "assets": [
+        {"type": "code", "lang": "c", "text": "#include <stdio.h>\nint recursive(int n) {\n    int sum;\n    if (n > 2) {\n        sum = recursive(n-1) + recursive(n-2);\n        printf(\"%d \", sum);\n    }\n    else\n        sum = n;\n    return sum;\n}\nint main(void) {\n    int result;\n    result = recursive(5);\n    printf(\"%d\", result);\n    return 0;\n}"}
+      ],
+      "choices": [
+        "1 2 3 5 7",
+        "1 3 5 7 9",
+        "3 3 5 9 9",
+        "3 5 3 8 8"
+      ],
+      "answer": 4,
+      "explanation": "recursive(5) 호출을 전개하면(n≤2일 때 sum=n, n>2일 때 두 호출의 합을 출력):<br>recursive(3)=r(2)+r(1)=2+1=<b>3</b> 출력<br>recursive(4)=r(3)+r(2): 안쪽 r(3)에서 <b>3</b> 출력 후 3+2=<b>5</b> 출력<br>recursive(5)=r(4)+r(3): r(4) 계산 중 3,5 출력, 이어 r(3)에서 <b>3</b> 출력, 5+3=<b>8</b> 출력<br>최종 result=8을 줄바꿈 없이 출력 → 8. 전체 출력은 <b>3 5 3 8 8</b> 로 ④가 옳다."
+    }
+  ]
+}
