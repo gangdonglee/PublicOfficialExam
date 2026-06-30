@@ -223,20 +223,41 @@
   /* ---------------- exam mode sheet ---------------- */
   function openModeSheet(subject, year) {
     const s = Data.subject(subject);
-    const p = Store.getExam(`${subject}/${year}`);
+    const examId = `${subject}/${year}`;
+    const p = Store.getExam(examId);
     const best = bestAttempt(p);
-    openSheet(`
+    const inProg = p && p.inProgress;
+    const doneCount = inProg ? Object.keys(p.picks || {}).length : 0;
+    const hasRecord = !!(best || inProg);
+    const fresh = hasRecord ? "처음부터 · " : "";
+
+    let html = `
       <div class="grab"></div>
       <h3>${s.name} ${year}</h3>
-      <div class="sub">${best ? `최고 기록 ${best.score}/${best.total}점` : "20문항 · 첫 도전!"}</div>
+      <div class="sub">${best ? `최고 기록 ${best.score}/${best.total}점 · ${(p.attempts || []).length}회 응시` : (inProg ? "풀이 진행 중 · 20문항" : "20문항 · 첫 도전!")}</div>`;
+    if (inProg) {
+      html += `<button class="mode-btn" data-action="resume" data-id="${examId}">
+        <span class="e">▶️</span>
+        <div><div class="nm">이어풀기 (${doneCount}/20)</div><div class="ds">${p.mode === "test" ? "실전" : "학습"} 모드 · 풀던 곳부터 계속</div></div>
+      </button>`;
+    }
+    html += `
       <button class="mode-btn" data-action="start" data-subject="${subject}" data-year="${year}" data-mode="study">
         <span class="e">📚</span>
-        <div><div class="nm">학습 모드</div><div class="ds">한 문제씩 풀고 바로 정답·해설 확인</div></div>
+        <div><div class="nm">${fresh}학습 모드</div><div class="ds">한 문제씩 풀고 바로 정답·해설 확인</div></div>
       </button>
       <button class="mode-btn" data-action="start" data-subject="${subject}" data-year="${year}" data-mode="test">
         <span class="e">⏱️</span>
-        <div><div class="nm">실전 모드</div><div class="ds">20문항 다 풀고 채점 (시험처럼)</div></div>
-      </button>`);
+        <div><div class="nm">${fresh}실전 모드</div><div class="ds">20문항 다 풀고 채점 (시험처럼)</div></div>
+      </button>`;
+    if (hasRecord) {
+      html += `
+      <button class="mode-btn" data-action="reset-exam" data-id="${examId}" style="margin-top:14px;background:transparent;border:1px solid var(--border)">
+        <span class="e">🗑️</span>
+        <div><div class="nm" style="color:var(--wrong)">이 회차 기록 지우기</div><div class="ds">이 회차의 진도·점수를 초기화</div></div>
+      </button>`;
+    }
+    openSheet(html);
   }
 
   /* ---------------- quiz engine ---------------- */
@@ -685,6 +706,8 @@
       case "locked": toast("아직 준비 중인 회차예요 🙏"); break;
       case "start":
         closeSheet();
+        // 처음부터 다시: 이전 진행 기록(이어풀기용)을 비우고 새로 시작 (응시 기록은 유지)
+        Store.saveInProgress(`${d.subject}/${d.year}`, { inProgress: false, picks: {}, idx: 0 });
         State.session = null;
         location.hash = `#/quiz/${d.subject}/${d.year}/${d.mode}`;
         break;
@@ -695,6 +718,14 @@
         location.hash = `#/quiz/${su}/${yr}/${(p && p.mode) || "study"}`;
         break;
       }
+      case "reset-exam":
+        if (confirm("이 회차의 학습 기록(진도·점수)을 지울까요?")) {
+          Store.clearExam(d.id);
+          closeSheet();
+          toast("이 회차 기록을 지웠어요");
+          route();
+        }
+        break;
       case "choose": choose(+d.no, +d.choice); break;
       case "reveal": revealQ(+d.no); break;
       case "next": nextQ(); break;

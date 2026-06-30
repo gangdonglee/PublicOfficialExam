@@ -1,5 +1,5 @@
 /* service worker — offline cache for 9급 기출 마스터 */
-const CACHE = "gp9-v1";
+const CACHE = "gp9-v2";
 const ASSETS = [
   "./",
   "./index.html",
