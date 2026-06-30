@@ -1,0 +1,268 @@
+{
+  "subject": "computer",
+  "subjectName": "컴퓨터일반",
+  "year": 2020,
+  "title": "2020 국가직 9급 컴퓨터일반",
+  "source": "2020년도 국가공무원 9급 공개경쟁채용 필기시험",
+  "booklet": "가",
+  "count": 20,
+  "questions": [
+    {
+      "no": 1,
+      "stem": "아날로그 신호를 디지털 신호로 변조하기 위한 펄스부호변조(PCM) 과정으로 옳지 않은 것은?",
+      "choices": [
+        "분절화(Segmentation)",
+        "표본화(Sampling)",
+        "부호화(Encoding)",
+        "양자화(Quantization)"
+      ],
+      "answer": 1,
+      "explanation": "PCM 과정은 <b>표본화(Sampling) → 양자화(Quantization) → 부호화(Encoding)</b>의 3단계로 이루어진다.<br>① <b>분절화(Segmentation)</b>는 PCM 단계가 아니다(데이터를 일정 크기로 나누는 것은 전송 계층 등에서 쓰는 개념).<br>②③④는 모두 PCM의 올바른 단계이다."
+    },
+    {
+      "no": 2,
+      "stem": "DBMS를 사용하는 이점으로 옳지 않은 것은?",
+      "choices": [
+        "데이터를 프로그램과 분리함으로써 데이터 독립성이 향상된다.",
+        "데이터의 공유와 동시 접근이 가능하다.",
+        "데이터의 중복을 허용하여 데이터의 일관성을 유지한다.",
+        "데이터의 무결성과 보안성을 유지한다."
+      ],
+      "answer": 3,
+      "explanation": "③이 틀렸다. DBMS는 데이터 중복을 <b>허용</b>하는 것이 아니라 <b>최소화(제어)</b>하여 일관성을 유지한다. 중복이 많으면 갱신 시 불일치가 발생한다.<br>① 데이터 독립성, ② 공유·동시 접근, ④ 무결성·보안성은 모두 DBMS의 올바른 이점이다."
+    },
+    {
+      "no": 3,
+      "stem": "CPU 내의 레지스터에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "Accumulator(AC): 연산 과정의 데이터를 일시적으로 저장하는 레지스터",
+        "Program Counter(PC): 다음에 인출될 명령어의 주소를 보관하는 레지스터",
+        "Memory Address Register(MAR): 가장 최근에 인출한 명령어를 보관하는 레지스터",
+        "Memory Buffer Register(MBR): 기억장치에 저장될 데이터 혹은 기억장치로부터 읽힌 데이터가 일시적으로 저장되는 버퍼 레지스터"
+      ],
+      "answer": 3,
+      "explanation": "③이 틀렸다. <b>MAR(메모리 주소 레지스터)</b>는 접근할 기억장치의 <b>주소</b>를 보관하는 레지스터이다. '가장 최근에 인출한 명령어를 보관'하는 것은 <b>명령어 레지스터(IR)</b>의 설명이다.<br>① AC, ② PC, ④ MBR은 모두 옳다."
+    },
+    {
+      "no": 4,
+      "stem": "소프트웨어 개발 프로세스 중 원형(Prototyping) 모델의 단계별 진행 과정을 올바르게 나열한 것은?",
+      "choices": [
+        "요구 사항 분석 → 시제품 설계 → 고객의 시제품 평가 → 시제품 개발 → 시제품 정제 → 완제품 생산",
+        "요구 사항 분석 → 시제품 설계 → 시제품 개발 → 고객의 시제품 평가 → 시제품 정제 → 완제품 생산",
+        "요구 사항 분석 → 고객의 시제품 평가 → 시제품 개발 → 시제품 설계 → 시제품 정제 → 완제품 생산",
+        "요구 사항 분석 → 시제품 개발 → 시제품 설계 → 고객의 시제품 평가 → 시제품 정제 → 완제품 생산"
+      ],
+      "answer": 2,
+      "explanation": "프로토타이핑 모델은 <b>요구 사항 분석 → 시제품(원형) 설계 → 시제품 개발 → 고객 평가 → 시제품 정제(반복) → 완제품 생산</b> 순으로 진행된다. 시제품을 먼저 설계·개발한 뒤 고객이 평가하고 다듬는 흐름이므로 ②가 옳다.<br>① 개발 전에 평가가 올 수 없고, ③ 개발이 설계보다 앞설 수 없으며, ④ 설계 전에 개발이 올 수 없어 틀렸다."
+    },
+    {
+      "no": 5,
+      "stem": "네트워크 토폴로지에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "버스(bus)형 토폴로지는 설치가 간단하고 비용이 저렴하다.",
+        "링(ring)형 토폴로지는 통신 회선에 컴퓨터를 추가하거나 삭제하는 등 네트워크 재구성이 용이하다.",
+        "트리(tree)형 토폴로지는 허브(hub)에 문제가 발생해도 전체 네트워크에 영향을 주지 않는다.",
+        "성(star)형 토폴로지는 중앙집중적인 구조이므로 고장 발견과 유지보수가 쉽다."
+      ],
+      "answer": 3,
+      "explanation": "공식 정답은 ③이다. <b>트리형</b>은 상위 <b>허브(hub)에 문제가 생기면 그 하위 전체</b>에 영향을 미치므로 '영향을 주지 않는다'는 설명은 틀렸다.<br>참고로 ②의 링형은 회선 추가·삭제 시 전체가 영향을 받아 재구성이 어려운 편이나, 출제에서는 ③을 명백한 오답으로 보았다.<br>①④는 옳다."
+    },
+    {
+      "no": 6,
+      "stem": "RAID(Redundant Array of Independent Disks) 레벨에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "RAID 1 구조는 데이터를 두 개 이상의 디스크에 패리티 없이 중복 저장한다.",
+        "RAID 2 구조는 데이터를 각 디스크에 비트 단위로 분산 저장하고 여러 개의 해밍코드 검사디스크를 사용한다.",
+        "RAID 4 구조는 각 디스크에 데이터를 블록 단위로 분산 저장하고 하나의 패리티 검사디스크를 사용한다.",
+        "RAID 5 구조는 각 디스크에 데이터와 함께 이중 분산 패리티 정보를 블록 단위로 분산 저장한다."
+      ],
+      "answer": 4,
+      "explanation": "④가 틀렸다. <b>RAID 5</b>는 패리티를 모든 디스크에 분산 저장하지만 패리티는 <b>단일(single)</b>이다. '이중(dual) 분산 패리티'를 사용하는 것은 <b>RAID 6</b>이다.<br>① RAID 1(미러링), ② RAID 2(해밍코드), ③ RAID 4(전용 패리티 디스크)는 모두 옳다."
+    },
+    {
+      "no": 7,
+      "stem": "다중 스레드(Multi Thread) 프로그래밍의 이점에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "다중 스레드는 사용자의 응답성을 증가시킨다.",
+        "스레드는 그들이 속한 프로세스의 자원들과 메모리를 공유한다.",
+        "프로세스를 생성하는 것보다 스레드를 생성하여 문맥을 교환하면 오버헤드가 줄어든다.",
+        "다중 스레드는 한 스레드에 문제가 생기더라도 전체 프로세스에 영향을 미치지 않는다."
+      ],
+      "answer": 4,
+      "explanation": "④가 틀렸다. 한 프로세스 내 스레드들은 코드·데이터·힙 등 <b>자원을 공유</b>하므로, 한 스레드에 치명적 오류가 생기면 <b>전체 프로세스가 영향을 받아 종료</b>될 수 있다.<br>① 응답성 향상, ② 자원·메모리 공유, ③ 생성·문맥교환 오버헤드 감소는 모두 다중 스레드의 이점으로 옳다."
+    },
+    {
+      "no": 8,
+      "stem": "OSI(Open Systems Interconnect) 모델에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "네트워크 계층은 데이터 전송에 관한 서비스를 제공하는 계층으로 송신 측과 수신 측 사이의 실제적인 연결 설정 및 유지, 오류 복구와 흐름 제어 등을 수행한다.",
+        "데이터링크 계층은 네트워크 계층에서 받은 데이터를 프레임(frame)이라는 논리적인 단위로 구성하고 전송에 필요한 정보를 덧붙여 물리 계층으로 전달한다.",
+        "세션 계층은 전송하는 두 종단 프로세스 간의 접속(session)을 설정하고, 유지하고 종료하는 역할을 한다.",
+        "표현 계층은 전송하는 데이터의 표현 방식을 관리하고 암호화하거나 데이터를 압축하는 역할을 한다."
+      ],
+      "answer": 1,
+      "explanation": "①이 틀렸다. 송수신 종단 간 <b>실제적인 연결 설정·유지, 오류 복구, 흐름 제어</b>를 수행하는 것은 <b>전송 계층(Transport Layer)</b>이다. 네트워크 계층은 라우팅(경로 설정)과 논리 주소 지정을 담당한다.<br>② 데이터링크 계층(프레임화), ③ 세션 계층, ④ 표현 계층의 설명은 모두 옳다."
+    },
+    {
+      "no": 9,
+      "stem": "캐시기억장치 교체 알고리즘에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "LRU는 최근에 가장 오랫동안 사용되지 않았던 블록을 교체하는 방법이다.",
+        "FIFO는 캐시에 적재된 지 가장 오래된 블록을 먼저 교체하는 방법이다.",
+        "LFU는 캐시 블록마다 참조 횟수를 기록함으로써 가장 많이 참조된 블록을 교체하는 방법이다.",
+        "Random은 사용 횟수와 무관하게 임의로 블록을 교체하는 방법이다."
+      ],
+      "answer": 3,
+      "explanation": "③이 틀렸다. <b>LFU(Least Frequently Used)</b>는 참조 횟수가 <b>가장 적은(least)</b> 블록을 교체하는 방법이다. '가장 많이 참조된 블록'을 교체한다는 설명은 정반대로 잘못되었다.<br>① LRU, ② FIFO, ④ Random은 모두 옳다."
+    },
+    {
+      "no": 10,
+      "stem": "8진수 123.321을 16진수로 변환한 것은?",
+      "choices": [
+        "53.35",
+        "53.321",
+        "53.681",
+        "53.688"
+      ],
+      "answer": 4,
+      "explanation": "8진수를 2진수로 바꾼 뒤 4비트씩 묶어 16진수로 변환한다.<br>정수부 123₈ = 001 010 011₂ = 0101 0011₂ = <b>53</b>₁₆.<br>소수부 .321₈ = .011 010 001₂ → 소수점부터 4비트씩: 0110 1000 1 = .68(8…)₁₆ → <b>.68</b>.<br>따라서 <b>53.68(8)</b>이므로 ④가 가장 정확하다."
+    },
+    {
+      "no": 11,
+      "stem": "암호화 기술에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "공개키 암호화는 암호화하거나 복호화하는 데 동일한 키를 사용한다.",
+        "공개키 암호화는 비공개키 암호화에 비해 암호화 알고리즘이 복잡하여 처리속도가 느리다.",
+        "공개키 암호화의 대표적인 알고리즘에는 데이터 암호화 표준(Data Encryption Standard)이 있다.",
+        "비밀키 암호화는 암호화와 복호화 과정에서 서로 다른 키를 사용하는 비대칭 암호화(asymmetric encryption)다."
+      ],
+      "answer": 2,
+      "explanation": "②가 옳다. <b>공개키(비대칭) 암호화</b>는 큰 수의 연산을 사용하므로 비밀키(대칭) 암호화보다 알고리즘이 복잡하고 <b>처리속도가 느리다</b>.<br>① ✕ 동일한 키를 쓰는 것은 비밀키(대칭) 암호화이다.<br>③ ✕ DES는 <b>대칭키(비밀키)</b> 알고리즘이며, 공개키 대표는 RSA이다.<br>④ ✕ 서로 다른 키를 쓰는 비대칭 암호화는 비밀키가 아니라 <b>공개키</b> 암호화이다."
+    },
+    {
+      "no": 12,
+      "stem": "CPU를 다른 프로세스로 교환하려면 이전 프로세스의 상태를 보관하고 새로운 프로세스의 보관된 상태로 복구하는 작업이 필요하다. 이 작업으로 옳은 것은?",
+      "choices": [
+        "세마포어(Semaphore)",
+        "모니터(Monitor)",
+        "상호배제(Mutual Exclusion)",
+        "문맥교환(Context Switching)"
+      ],
+      "answer": 4,
+      "explanation": "④가 옳다. 현재 프로세스의 상태(레지스터·PC 등, 즉 문맥)를 PCB에 저장하고 다음 프로세스의 문맥을 복원하는 작업이 <b>문맥교환(Context Switching)</b>이다.<br>① 세마포어, ② 모니터, ③ 상호배제는 모두 <b>프로세스 동기화·상호배제</b>를 위한 기법으로 문맥교환과 다르다."
+    },
+    {
+      "no": 13,
+      "stem": "응용프로그램 제작에 필요한 개발환경, SDK 등 플랫폼 자체를 서비스 형태로 제공하는 클라우드 컴퓨팅 서비스 모델은?",
+      "choices": [
+        "DNS",
+        "PaaS",
+        "SaaS",
+        "IaaS"
+      ],
+      "answer": 2,
+      "explanation": "②가 옳다. 개발환경·SDK 등 <b>플랫폼</b>을 서비스로 제공하는 모델은 <b>PaaS(Platform as a Service)</b>이다.<br>① DNS는 도메인 이름 해석 서비스로 클라우드 모델이 아니다.<br>③ SaaS는 완성된 <b>소프트웨어(응용)</b>를, ④ IaaS는 서버·스토리지 등 <b>인프라</b>를 서비스로 제공한다."
+    },
+    {
+      "no": 14,
+      "stem": "다음 프로그램의 실행 결과로 옳은 것은?",
+      "assets": [
+        {"type": "code", "lang": "c", "text": "#include <stdio.h>\nint main(void)\n{\n    int array[] = {100, 200, 300, 400, 500};\n    int *ptr;\n    ptr = array;\n    printf(\"%d\\n\", *(ptr+3) + 100);\n}"}
+      ],
+      "choices": [
+        "200",
+        "300",
+        "400",
+        "500"
+      ],
+      "answer": 4,
+      "explanation": "ptr은 array의 시작 주소를 가리킨다. <b>*(ptr+3)</b>은 array[3] = <b>400</b>이다.<br>여기에 100을 더하면 400 + 100 = <b>500</b>이므로 ④이다."
+    },
+    {
+      "no": 15,
+      "stem": "다음 프로그램은 연결 리스트를 만들기 위한 코드의 일부분이다. 아래 그림과 같이 두 개의 노드 first, second가 연결되었다고 가정하고, 위의 코드를 참조하여 노드 tmp를 노드 first와 노드 second 사이에 삽입하고자 할 때, 프로그램 코드로 옳은 것은?",
+      "assets": [
+        {"type": "code", "lang": "c", "text": "struct node {\n  int number;\n  struct node *link;\n};\nstruct node first;\nstruct node second;\nstruct node tmp;"},
+        {"type": "box", "html": "[그림] first 노드의 link가 second 노드를 가리키고(first → second), second 노드의 link는 NULL을 가리킨다."}
+      ],
+      "choices": [
+        "tmp.link = &first; first.link = &tmp;",
+        "tmp.link = first.link; first.link = &tmp;",
+        "tmp.link = &second; first.link = second.link;",
+        "tmp.link = NULL; second.link = &tmp;"
+      ],
+      "answer": 2,
+      "explanation": "first와 second 사이에 tmp를 끼워 넣으려면, 먼저 <b>tmp가 second를 가리키게</b> 한 뒤 <b>first가 tmp를 가리키게</b> 해야 한다.<br>② <code>tmp.link = first.link;</code>는 first가 가리키던 second를 tmp가 가리키게 하고, <code>first.link = &amp;tmp;</code>로 first가 tmp를 가리키게 하여 first → tmp → second가 완성된다.<br>① tmp가 first를 가리키게 되어 순환이 생기고, ③④는 연결이 끊기거나 잘못 연결된다."
+    },
+    {
+      "no": 16,
+      "stem": "다음 C 프로그램의 결과로 옳은 것은?",
+      "assets": [
+        {"type": "code", "lang": "c", "text": "#include <stdio.h>\nint main()\n{\n    int a, b;\n    a = b = 1;\n\n    if (a = 2)\n        b = a + 1;\n    else if (a == 1)\n        b = b + 1;\n    else\n        b = 10;\n\n    printf(\"%d, %d\\n\", a, b);\n}"}
+      ],
+      "choices": [
+        "2, 3",
+        "2, 2",
+        "1, 2",
+        "2, 10"
+      ],
+      "answer": 1,
+      "explanation": "<code>if (a = 2)</code>는 비교(==)가 아니라 <b>대입</b>이다. a에 2가 대입되고 그 값 2는 참(0이 아님)이므로 if 블록이 실행된다.<br>따라서 <code>b = a + 1 = 2 + 1 = 3</code>. 출력은 a=2, b=3 → <b>\"2, 3\"</b>이므로 ①이다."
+    },
+    {
+      "no": 17,
+      "stem": "다음 이진 트리에 대하여 후위 순회를 하는 경우 다섯 번째 방문하는 노드는?",
+      "assets": [
+        {"type": "image", "src": "data/img/computer-2020-q17.png", "alt": "이진 트리: 루트 A의 왼쪽 자식은 B, 오른쪽 자식은 C. B의 왼쪽 자식은 D, 오른쪽 자식은 E. E의 왼쪽 자식은 G. C의 오른쪽 자식은 F."}
+      ],
+      "choices": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "answer": 4,
+      "explanation": "후위 순회(post-order)는 <b>왼쪽 → 오른쪽 → 루트</b> 순서이다.<br>방문 순서: D → G → E → B → <b>F</b> → C → A.<br>따라서 다섯 번째로 방문하는 노드는 <b>F</b>이므로 ④이다."
+    },
+    {
+      "no": 18,
+      "stem": "프로세스 스케줄링에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "FCFS(First Come First Served) 스케줄링은 비선점 방식으로 대화식 시스템에 적합하다.",
+        "SJF(Shortest Job First) 스케줄링은 실행 시간이 가장 짧은 작업(프로세스)을 신속하게 실행하므로 평균 대기시간이 FCFS 스케줄링보다 짧다.",
+        "Round-Robin 스케줄링은 우선순위가 적용되지 않은 단순한 선점형 방식이다.",
+        "다단계 큐(Multilevel Queue) 스케줄링은 우선순위에 따라 준비 큐를 여러 개 사용하는 방식이다."
+      ],
+      "answer": 1,
+      "explanation": "①이 틀렸다. <b>FCFS</b>는 비선점 방식이 맞지만, 먼저 도착한 작업이 끝날 때까지 기다려야 하므로 응답 시간이 길어 <b>대화식(시분할) 시스템에는 부적합</b>하다. 대화식에 적합한 것은 선점형인 Round-Robin이다.<br>② SJF, ③ Round-Robin, ④ 다단계 큐 설명은 모두 옳다."
+    },
+    {
+      "no": 19,
+      "stem": "TCP/IP 프로토콜 스택에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "데이터링크(datalink) 계층, 전송(transport) 계층, 세션(session) 계층 및 응용(application) 계층으로 구성된다.",
+        "ICMP는 데이터링크 계층에서 사용 가능한 프로토콜이다.",
+        "UDP는 전송 계층에서 사용되는 비연결형 프로토콜이다.",
+        "응용 계층은 데이터가 목적지까지 찾아갈 경로를 설정하기 위해 라우팅(routing) 프로토콜을 운영한다."
+      ],
+      "answer": 3,
+      "explanation": "③이 옳다. <b>UDP</b>는 전송 계층의 <b>비연결형(connectionless)</b> 프로토콜로 신뢰성보다 속도를 중시한다.<br>① ✕ TCP/IP 4계층은 네트워크 액세스(데이터링크)·인터넷(네트워크)·전송·응용으로 구성되며 세션 계층은 없다.<br>② ✕ ICMP는 데이터링크가 아니라 <b>인터넷(네트워크) 계층</b> 프로토콜이다.<br>④ ✕ 라우팅(경로 설정)은 응용 계층이 아니라 <b>네트워크(인터넷) 계층</b>의 기능이다."
+    },
+    {
+      "no": 20,
+      "stem": "다음 테이블 인스턴스(Instance)들에 대하여 오류 없이 동작하는 SQL(Structured Query Language) 문장은?",
+      "assets": [
+        {"type": "table", "html": "<table><caption>STUDENT</caption><thead><tr><th>칼럼 이름</th><th>데이터 타입</th><th>키 타입</th><th>설명</th></tr></thead><tbody><tr><td>studno</td><td>숫자</td><td>기본키</td><td>학번</td></tr><tr><td>name</td><td>문자열</td><td></td><td>이름</td></tr><tr><td>grade</td><td>숫자</td><td></td><td>학년</td></tr><tr><td>height</td><td>숫자</td><td></td><td>키</td></tr><tr><td>deptno</td><td>숫자</td><td></td><td>학과 번호</td></tr></tbody></table>"},
+        {"type": "table", "html": "<table><caption>PROFESSOR</caption><thead><tr><th>칼럼 이름</th><th>데이터 타입</th><th>키 타입</th><th>설명</th></tr></thead><tbody><tr><td>profno</td><td>숫자</td><td>기본키</td><td>번호</td></tr><tr><td>name</td><td>문자열</td><td></td><td>이름</td></tr><tr><td>position</td><td>문자열</td><td></td><td>직급</td></tr><tr><td>salary</td><td>숫자</td><td></td><td>급여</td></tr><tr><td>deptno</td><td>숫자</td><td></td><td>학과 번호</td></tr></tbody></table>"}
+      ],
+      "choices": [
+        "SELECT deptno, position, AVG(salary) FROM PROFESSOR GROUP BY deptno;",
+        "(SELECT studno, name FROM STUDENT WHERE deptno = 101) UNION (SELECT profno, name FROM PROFESSOR WHERE deptno = 101);",
+        "SELECT grade, COUNT(*), AVG(height) FROM STUDENT WHERE COUNT(*) > 2 GROUP BY grade;",
+        "SELECT name, grade, height FROM STUDENT WHERE height > (SELECT height, grade FROM STUDENT WHERE name = '홍길동');"
+      ],
+      "answer": 2,
+      "explanation": "②가 옳다. UNION으로 결합하는 두 SELECT의 칼럼 수(2개)와 대응 타입(숫자, 문자열)이 일치하므로 오류 없이 동작한다.<br>① ✕ GROUP BY에 없는 <b>position</b>을 집계 없이 SELECT하여 오류(deptno로만 그룹화).<br>③ ✕ 집계 함수는 WHERE에 쓸 수 없다(<code>WHERE COUNT(*) &gt; 2</code> 오류, HAVING을 써야 함).<br>④ ✕ 비교 대상 서브쿼리가 <b>두 개 칼럼(height, grade)</b>을 반환하여 단일 값 비교에 쓸 수 없다."
+    }
+  ]
+}

@@ -7,7 +7,18 @@
       "short": "컴퓨터",
       "icon": "💻",
       "color": "#3b82f6",
-      "years": [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
+      "years": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016
+      ]
     },
     {
       "id": "security",
@@ -15,7 +26,18 @@
       "short": "정보보호",
       "icon": "🔐",
       "color": "#10b981",
-      "years": [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
+      "years": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016
+      ]
     },
     {
       "id": "korean",
@@ -23,8 +45,50 @@
       "short": "국어",
       "icon": "📖",
       "color": "#f59e0b",
-      "years": [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
+      "years": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016
+      ]
     }
   ],
-  "available": ["computer/2025", "computer/2024", "security/2025", "korean/2025"]
+  "available": [
+    "computer/2025",
+    "computer/2024",
+    "computer/2023",
+    "computer/2022",
+    "computer/2021",
+    "computer/2020",
+    "computer/2019",
+    "computer/2018",
+    "computer/2017",
+    "computer/2016",
+    "security/2025",
+    "security/2024",
+    "security/2023",
+    "security/2022",
+    "security/2021",
+    "security/2020",
+    "security/2019",
+    "security/2018",
+    "security/2017",
+    "security/2016",
+    "korean/2025",
+    "korean/2024",
+    "korean/2023",
+    "korean/2022",
+    "korean/2021",
+    "korean/2020",
+    "korean/2019",
+    "korean/2018",
+    "korean/2017",
+    "korean/2016"
+  ]
 }

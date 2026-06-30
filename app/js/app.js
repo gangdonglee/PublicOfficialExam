@@ -28,6 +28,10 @@
 
   /* ---------------- helpers ---------------- */
   const circled = ["①", "②", "③", "④", "⑤"];
+  // 복수정답 지원: answer는 숫자 또는 [숫자,...] 둘 다 허용
+  const accepted = (q) => (Array.isArray(q.answer) ? q.answer : [q.answer]);
+  const isRight = (q, pick) => pick != null && accepted(q).includes(pick);
+  const answerLabel = (q) => accepted(q).map(a => circled[a - 1]).join(", ");
   const qid = (subject, year, no) => `${subject}/${year}/${no}`;
   const esc = (s) => String(s).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
   function vibrate(ms) { try { if (navigator.vibrate) navigator.vibrate(ms); } catch (e) {} }
@@ -277,7 +281,7 @@
       const n = parseInt(dp.get("reveal"), 10) || 1;
       const q = State.session.questions.find(x => x.no === n) || State.session.questions[0];
       State.session.idx = State.session.questions.indexOf(q);
-      State.session.picks[q.no] = dp.get("pick") ? +dp.get("pick") : q.answer;
+      State.session.picks[q.no] = dp.get("pick") ? +dp.get("pick") : accepted(q)[0];
       State.session.revealed.add(q.no);
     }
     // __ENDDEMO__
@@ -292,7 +296,7 @@
 
   function curScore() {
     const s = State.session;
-    return s.questions.reduce((n, q) => n + (s.picks[q.no] === q.answer ? 1 : 0), 0);
+    return s.questions.reduce((n, q) => n + (isRight(q, s.picks[q.no]) ? 1 : 0), 0);
   }
 
   function renderQuiz() {
@@ -318,21 +322,21 @@
       const n = i + 1;
       let cls = "choice";
       if (revealed) {
-        if (n === q.answer) cls += " correct";
+        if (accepted(q).includes(n)) cls += " correct";
         else if (pick === n) cls += " wrong";
       } else if (pick === n) cls += " selected";
       const dis = (isStudy && revealed) ? "disabled" : "";
       return `<button class="${cls}" ${dis} data-action="choose" data-no="${q.no}" data-choice="${n}">
-        <span class="mk">${revealed && n === q.answer ? "✓" : (revealed && pick === n ? "✕" : circled[i])}</span>
+        <span class="mk">${revealed && accepted(q).includes(n) ? "✓" : (revealed && pick === n ? "✕" : circled[i])}</span>
         <span class="tx">${c}</span>
       </button>`;
     }).join("");
 
     let explainHtml = "";
     if (revealed) {
-      const ok = pick === q.answer;
+      const ok = isRight(q, pick);
       explainHtml = `<div class="explain">
-        <div class="head ${ok ? "ok" : "no"}">${ok ? "✅ 정답입니다!" : `❌ 오답 · 정답은 ${circled[q.answer - 1]}`}</div>
+        <div class="head ${ok ? "ok" : "no"}">${ok ? "✅ 정답입니다!" : `❌ 오답 · 정답은 ${answerLabel(q)}`}</div>
         <div class="body">${q.explanation || "해설 준비 중입니다."}</div>
       </div>`;
     }
@@ -402,8 +406,8 @@
       if (s.revealed.has(no)) return;
       s.picks[no] = choice;
       s.revealed.add(no);
-      vibrate(choice === q.answer ? 12 : [8, 40, 8]);
-      if (choice !== q.answer) Store.addWrong(q.qid, { subject: q._subject, year: q._year, no });
+      vibrate(isRight(q, choice) ? 12 : [8, 40, 8]);
+      if (!isRight(q, choice)) Store.addWrong(q.qid, { subject: q._subject, year: q._year, no });
       else if (Store.isWrong(q.qid)) Store.removeWrong(q.qid); // mastered
       persistSession();
       renderQuiz();
@@ -444,7 +448,7 @@
     // record wrong notes for test mode
     if (s.mode === "test") {
       s.questions.forEach(q => {
-        if (s.picks[q.no] === q.answer) { if (Store.isWrong(q.qid)) Store.removeWrong(q.qid); }
+        if (isRight(q, s.picks[q.no])) { if (Store.isWrong(q.qid)) Store.removeWrong(q.qid); }
         else Store.addWrong(q.qid, { subject: q._subject, year: q._year, no: q.no });
       });
     }
@@ -487,11 +491,11 @@
     const msg = pct >= 90 ? "🏆 완벽해요!" : pct >= 70 ? "👍 잘했어요!" : pct >= 50 ? "💪 조금만 더!" : "📖 복습이 필요해요";
 
     const reviews = exam.questions.map((q, i) => {
-      const ok = picks[q.no] === q.answer;
+      const ok = isRight(q, picks[q.no]);
       return `<button class="review-item" data-action="review-q" data-subject="${subject}" data-year="${year}" data-idx="${i}">
         <div class="ic ${ok ? "o" : "x"}">${ok ? "○" : "✕"}</div>
         <div class="q"><div class="t">${q.no}. ${esc(q.stem)}</div>
-          <div class="s">${ok ? "정답" : `내 답 ${picks[q.no] ? circled[picks[q.no] - 1] : "—"} · 정답 ${circled[q.answer - 1]}`}</div></div>
+          <div class="s">${ok ? "정답" : `내 답 ${picks[q.no] ? circled[picks[q.no] - 1] : "—"} · 정답 ${answerLabel(q)}`}</div></div>
         <span class="chev">›</span>
       </button>`;
     }).join("");
@@ -553,7 +557,7 @@
       return `<button class="list-row" data-action="practice-one" data-id="${id}">
         <span class="tag" style="color:${s.color}">${s.short} ${yr}</span>
         <div class="q"><div class="t">${q.no}. ${esc(q.stem)}</div>
-          <div class="s">${isWrong ? `${w.count}번 틀림` : "저장됨"} · ${circled[q.answer - 1]} 정답</div></div>
+          <div class="s">${isWrong ? `${w.count}번 틀림` : "저장됨"} · ${answerLabel(q)} 정답</div></div>
         <span class="chev">›</span>
       </button>`;
     }).join("");
@@ -718,7 +722,7 @@
         Data.getExam(d.subject, d.year).then(exam => {
           const p = Store.getExam(`${d.subject}/${d.year}`);
           const picks = (p && p.picks) || {};
-          const wrongQs = exam.questions.filter(q => picks[q.no] !== q.answer);
+          const wrongQs = exam.questions.filter(q => !isRight(q, picks[q.no]));
           if (!wrongQs.length) { toast("틀린 문제가 없어요 🎉"); return; }
           buildSession({ examId: null, exam, mode: "study", questions: wrongQs, persist: false, title: `${exam.subjectName} ${exam.year} 오답복습` });
           location.hash = "#/practice";
